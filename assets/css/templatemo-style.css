@@ -13,7 +13,8 @@ body {
 }
 
 #page-wraper {
-    background: url(../images/page-bg2.jpg) no-repeat center center fixed;
+    /* background: url(../images/page-bg2.jpg) no-repeat center center fixed; */
+    background-color: #EFEFEF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -117,7 +118,7 @@ html {
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
-    color: #fff;
+    color: #920C0C;
     width: 100%;
     transition: all 0.5s;
     border-top: 2px solid #fff;
