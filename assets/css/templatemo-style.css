@@ -303,13 +303,13 @@ html {
 .section-heading h2 {
     font-size: 32px;
     font-weight: 700;
-    color: #fff;
+    color: #920C0C;
 }
 
 .section-heading .line-dec {
     width: 60px;
     height: 3px;
-    background-color: #a43f49;
+    /* background-color: #a43f49; */
     margin: 10px auto;
 }
 
