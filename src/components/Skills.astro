@@ -1,0 +1,30 @@
+---
+import { skills } from '../data/site';
+---
+
+<section id="skills" class="section-pad section-y border-t border-line">
+  <div class="mx-auto max-w-content">
+    <div class="reveal">
+      <p class="eyebrow">Skills</p>
+      <h2 class="section-title">What I work with</h2>
+      <p class="section-lead">
+        Tools I’ve used in production across backend, frontend, data and cloud platforms.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {Object.entries(skills).map(([group, items]) => (
+        <div class="reveal border-t border-line pt-6">
+          <h3 class="text-sm font-medium uppercase tracking-[0.16em] text-faint">{group}</h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {items.map((item) => (
+              <li class="rounded-full border border-line bg-surface px-3 py-1.5 text-sm text-ink">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

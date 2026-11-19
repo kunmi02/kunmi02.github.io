@@ -1,0 +1,22 @@
+---
+import { aboutParagraphs, site } from '../data/site';
+---
+
+<section id="about" class="section-pad section-y border-t border-line">
+  <div class="mx-auto max-w-content reveal">
+    <p class="eyebrow">About</p>
+    <h2 class="section-title">My story</h2>
+    <div class="mt-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+      <div>
+        <p class="font-display text-2xl leading-snug text-ink sm:text-3xl">
+          {site.years} years shipping production software across payments, platforms and AI.
+        </p>
+      </div>
+      <div class="space-y-5 text-base leading-relaxed text-muted sm:text-lg">
+        {aboutParagraphs.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

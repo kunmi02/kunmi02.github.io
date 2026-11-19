@@ -1,0 +1,20 @@
+---
+import { site } from '../data/site';
+---
+
+<section id="contact" class="section-pad section-y border-t border-line">
+  <div class="mx-auto max-w-content reveal">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-title">Let’s talk</h2>
+    <p class="section-lead">
+      Hiring for Forward Deployed, Customer Success, Technical Support, Senior Full Stack or Solutions Engineering roles in the UK, EU or US remote? Email me or find me on LinkedIn and GitHub.
+    </p>
+
+    <div class="mt-10 flex flex-wrap gap-3">
+      <a class="btn-primary" href={`mailto:${site.email}`}>{site.email}</a>
+      <a class="btn-secondary" href={site.social.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn-secondary" href={site.social.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn-ghost" href={site.cvPath} download>Download CV</a>
+    </div>
+  </div>
+</section>

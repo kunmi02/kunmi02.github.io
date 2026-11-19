@@ -1,0 +1,81 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+import { site } from '../data/site';
+
+const links = [
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Work' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-line bg-canvas/95 backdrop-blur-xl supports-[backdrop-filter]:bg-canvas/75">
+  <div class="section-pad mx-auto flex h-16 max-w-content items-center justify-between gap-4">
+    <a href="#top" class="font-display text-lg tracking-tight text-ink">
+      {site.shortName}
+    </a>
+
+    <nav class="hidden items-center gap-7 text-sm text-muted md:flex" aria-label="Primary">
+      {links.map((link) => (
+        <a class="transition hover:text-ink" href={link.href}>
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a class="btn-secondary hidden sm:inline-flex" href={site.cvPath} download>
+        Download CV
+      </a>
+      <ThemeToggle />
+      <button
+        type="button"
+        id="menu-toggle"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-ink md:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open menu"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav
+    id="mobile-nav"
+    class="hidden border-t border-line bg-canvas section-pad py-4 md:hidden"
+    aria-label="Mobile"
+  >
+    <div class="mx-auto flex max-w-content flex-col gap-3 text-sm">
+      {links.map((link) => (
+        <a class="rounded-lg px-2 py-2 text-muted transition hover:bg-surface hover:text-ink" href={link.href}>
+          {link.label}
+        </a>
+      ))}
+      <a class="btn-primary mt-2" href={site.cvPath} download>Download CV</a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('mobile-nav');
+
+  toggle?.addEventListener('click', () => {
+    const open = nav?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+
+  nav?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.add('hidden');
+      toggle?.setAttribute('aria-expanded', 'false');
+      toggle?.setAttribute('aria-label', 'Open menu');
+    });
+  });
+</script>
