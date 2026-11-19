@@ -46,7 +46,7 @@ import { projects } from '../data/site';
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visit site
+                {project.url.includes('github.com') ? 'View on GitHub' : 'Visit site'}
                 <span aria-hidden="true">→</span>
               </a>
             )}
