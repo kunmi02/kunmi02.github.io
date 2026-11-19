@@ -234,6 +234,7 @@ export const education = [
 
 export const languages = [
   { name: 'English', level: 'C1' },
+  { name: 'French', level: 'A1' },
   { name: 'Yoruba', level: null },
 ] as const;
 
