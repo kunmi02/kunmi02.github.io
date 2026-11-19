@@ -3,43 +3,23 @@ import { site } from '../data/site';
 ---
 
 <section id="top" class="relative isolate overflow-hidden">
-  <div class="grid min-h-[100svh] lg:grid-cols-2">
-    <div class="section-pad flex items-end pb-16 pt-28 sm:pb-20 sm:pt-32 lg:items-center lg:py-24">
-      <div class="mx-auto w-full max-w-xl animate-fade-up lg:ml-auto lg:mr-0 lg:max-w-lg xl:max-w-xl">
-        <h1 class="font-display text-5xl leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-[4.25rem]">
-          {site.name}
-        </h1>
-        <p class="mt-6 text-lg leading-relaxed text-ink sm:text-xl">
-          {site.headline}
-        </p>
-        <p class="mt-4 text-base leading-relaxed text-muted sm:text-lg">
-          {site.valueProp}
-        </p>
-        <div class="mt-9 flex flex-wrap gap-3">
-          <a class="btn-primary" href="#projects">View work</a>
-          <a class="btn-secondary" href={site.cvPath} download>Download CV</a>
-          <a class="btn-ghost" href="#contact">Contact</a>
-        </div>
+  <div class="section-pad mx-auto flex min-h-[88svh] max-w-content items-center pb-16 pt-28 sm:pb-20 sm:pt-32 lg:min-h-[92svh] lg:py-24">
+    <div class="w-full max-w-3xl animate-fade-up">
+      <p class="eyebrow">{site.location} · {site.openness}</p>
+      <h1 class="mt-5 font-display text-5xl leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-[4.5rem]">
+        {site.name}
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink sm:text-xl">
+        {site.headline}
+      </p>
+      <p class="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+        {site.valueProp}
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a class="btn-primary" href="#projects">View work</a>
+        <a class="btn-secondary" href={site.cvPath} download>Download CV</a>
+        <a class="btn-ghost" href="#contact">Contact</a>
       </div>
-    </div>
-
-    <div class="relative min-h-[56vh] lg:min-h-[100svh]">
-      <picture>
-        <source srcset="/images/author.webp" type="image/webp" />
-        <img
-          src={site.image}
-          alt={`Portrait of ${site.name}`}
-          width="800"
-          height="800"
-          class="absolute inset-0 h-full w-full object-cover object-center"
-          decoding="async"
-          fetchpriority="high"
-        />
-      </picture>
-      <div
-        class="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-canvas to-transparent sm:w-24 lg:w-28"
-        aria-hidden="true"
-      ></div>
     </div>
   </div>
 </section>

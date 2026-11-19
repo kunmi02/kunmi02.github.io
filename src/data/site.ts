@@ -102,12 +102,106 @@ export const projects = [
     tags: ['Health', 'Community'],
   },
   {
+    name: 'GitDeclutter',
+    url: 'https://github.com/kunmi02/git-declutter',
+    summary:
+      'Go CLI that analyzes stale local Git branches and classifies each as SAFE, REVIEW, KEEP or PROTECTED before anything is deleted. Uses local history, remote tracking state, and GitHub/GitLab PR metadata.',
+    impact: 'Side project — safe branch cleanup',
+    tags: ['Go', 'CLI', 'Developer tools'],
+  },
+  {
     name: 'UI blood-donor app',
     url: null,
     summary:
       'Final-year Android app to locate willing blood donors, find nearest blood banks, and register as a volunteer.',
     impact: 'University of Ibadan final-year project',
     tags: ['Android', 'Health'],
+  },
+] as const;
+
+export const openSource = [
+  {
+    name: 'Port Terraform Provider',
+    repo: 'port-labs/terraform-provider-port-labs',
+    url: 'https://github.com/port-labs/terraform-provider-port-labs',
+    prCount: 7,
+    contributions: [
+      {
+        number: 340,
+        url: 'https://github.com/port-labs/terraform-provider-port-labs/pull/340',
+        description:
+          'Added `port_organization` Terraform resource to manage organization settings.',
+      },
+      {
+        number: 342,
+        url: 'https://github.com/port-labs/terraform-provider-port-labs/pull/342',
+        description:
+          'Expanded organization resource to support additional API settings, announcements and permissions.',
+      },
+      {
+        number: 315,
+        url: 'https://github.com/port-labs/terraform-provider-port-labs/pull/315',
+        description: 'Fixed importing action dataset rules containing primitive values.',
+      },
+      {
+        number: 306,
+        url: 'https://github.com/port-labs/terraform-provider-port-labs/pull/306',
+        description: 'Fixed blueprint permissions import.',
+      },
+      {
+        number: 303,
+        url: 'https://github.com/port-labs/terraform-provider-port-labs/pull/303',
+        description: 'Improved test coverage for JQ array minimum and maximum constraints.',
+      },
+      {
+        number: 301,
+        url: 'https://github.com/port-labs/terraform-provider-port-labs/pull/301',
+        description: 'Added dynamic JQ expression support for array min/max items.',
+      },
+      {
+        number: 292,
+        url: 'https://github.com/port-labs/terraform-provider-port-labs/pull/292',
+        description: 'Added Terraform-based organization secret management.',
+      },
+    ],
+  },
+  {
+    name: 'Port Experimental – Terraform Import Generator',
+    repo: 'port-experimental/terraform-import-generator',
+    url: 'https://github.com/port-experimental/terraform-import-generator',
+    prCount: 6,
+    contributions: [
+      {
+        number: 7,
+        url: 'https://github.com/port-experimental/terraform-import-generator/pull/7',
+        description: 'Added system blueprint support.',
+      },
+      {
+        number: 8,
+        url: 'https://github.com/port-experimental/terraform-import-generator/pull/8',
+        description: 'Handled installation IDs containing whitespace.',
+      },
+      {
+        number: 9,
+        url: 'https://github.com/port-experimental/terraform-import-generator/pull/9',
+        description: 'Added configurable base URL support.',
+      },
+      {
+        number: 10,
+        url: 'https://github.com/port-experimental/terraform-import-generator/pull/10',
+        description: 'Fixed alias handling.',
+      },
+      {
+        number: 11,
+        url: 'https://github.com/port-experimental/terraform-import-generator/pull/11',
+        description: 'Fixed system blueprint import.',
+      },
+      {
+        number: 12,
+        url: 'https://github.com/port-experimental/terraform-import-generator/pull/12',
+        description: 'Fixed entity import page.',
+      },
+    ],
   },
 ] as const;
 
@@ -129,17 +223,18 @@ export const education = [
   {
     school: 'LASUSTECH',
     credential: 'ND Computer Science, Distinction',
-    period: null,
+    period: '2012 – 2014',
   },
   {
     school: 'AltSchool Africa',
     credential: 'Cloud Engineering Diploma',
-    period: '2025',
+    period: '2024 – 2025',
   },
 ] as const;
 
 export const languages = [
   { name: 'English', level: 'C1' },
+  { name: 'French', level: 'A1' },
   { name: 'Yoruba', level: null },
 ] as const;
 
