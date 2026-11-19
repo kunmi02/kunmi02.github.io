@@ -31,7 +31,7 @@ const svg = `
   <rect width="100%" height="100%" fill="url(#bg)"/>
   <rect width="100%" height="100%" fill="url(#glow)"/>
   <text x="72" y="170" font-family="Georgia, serif" font-size="64" fill="#eef2f2">Azeez Ibrahim A.</text>
-  <text x="72" y="250" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#5dceb0">Forward Deployed &amp; Platform Engineer</text>
+  <text x="72" y="250" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#5dceb0">Forward Deployed Engineer</text>
   <text x="72" y="320" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#a5b0b4">Cloud · Payments · AI</text>
   <text x="72" y="540" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#6f7a7e">kunmi02.github.io</text>
 </svg>

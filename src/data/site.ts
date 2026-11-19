@@ -1,15 +1,15 @@
 export const site = {
   name: 'Azeez Ibrahim A.',
   shortName: 'Azeez',
-  title: 'Azeez Ibrahim A. — Forward Deployed & Platform Engineer',
+  title: 'Azeez Ibrahim A. — Forward Deployed Engineer',
   description:
-    'Forward Deployed & Platform Engineer with 6+ years building production systems across cloud, payments and AI. Based in Lagos, Nigeria. Open to UK/EU relocation and remote roles.',
+    'Forward Deployed Engineer with 6+ years building production systems across cloud, payments and AI. Based in Lagos, Nigeria. Open to UK/EU relocation and remote roles.',
   url: 'https://kunmi02.github.io',
   email: 'azeezakinkunmi02@gmail.com',
   location: 'Lagos, Nigeria',
   openness: 'Open to UK/EU relocation and remote',
   headline:
-    'Forward Deployed & Platform Engineer building production systems across cloud, payments and AI.',
+    'Forward Deployed Engineer | Bridging customer needs and engineering through developer platforms, cloud infrastructure, and AI-powered solutions.',
   valueProp:
     '6+ years of software engineering. Based in Lagos, Nigeria. Open to UK/EU relocation and remote.',
   years: '6+',

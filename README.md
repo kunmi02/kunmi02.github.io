@@ -1,6 +1,6 @@
 # kunmi02.github.io
 
-Personal portfolio for **Azeez Ibrahim A.** — Forward Deployed & Platform Engineer.
+Personal portfolio for **Azeez Ibrahim A.** — Forward Deployed Engineer.
 
 Built with [Astro](https://astro.build) + [Tailwind CSS](https://tailwindcss.com). Deployed to GitHub Pages via GitHub Actions.
 
