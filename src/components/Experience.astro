@@ -1,0 +1,40 @@
+---
+import { experience } from '../data/site';
+---
+
+<section id="experience" class="section-pad section-y border-t border-line">
+  <div class="mx-auto max-w-content">
+    <div class="reveal">
+      <p class="eyebrow">Experience</p>
+      <h2 class="section-title">Where I’ve built</h2>
+      <p class="section-lead">
+        Roles from integrations and full stack delivery to forward deployed customer engineering.
+      </p>
+    </div>
+
+    <ol class="mt-14 space-y-0">
+      {experience.map((job) => (
+        <li class="reveal grid gap-4 border-t border-line py-10 md:grid-cols-[14rem_1fr] md:gap-10">
+          <div>
+            <p class="text-sm font-medium text-ink">{job.period}</p>
+            <p class="mt-1 text-sm text-muted">{job.location}</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-medium tracking-tight text-ink">
+              {job.role}
+            </h3>
+            <p class="mt-1 text-base text-accent">{job.company}</p>
+            <ul class="mt-5 space-y-3 text-base leading-relaxed text-muted">
+              {job.highlights.map((item) => (
+                <li class="flex gap-3">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

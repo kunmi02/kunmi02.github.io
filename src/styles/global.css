@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-canvas: #f7f8f8;
+  --color-surface: #ffffff;
+  --color-ink: #101314;
+  --color-muted: #5a6468;
+  --color-faint: #879197;
+  --color-line: #e3e7e8;
+  --color-accent: #0d6b58;
+  --color-accent-soft: rgba(13, 107, 88, 0.12);
+  --glow-a: rgba(13, 107, 88, 0.11);
+  --glow-b: rgba(40, 90, 120, 0.08);
+  color-scheme: light;
+}
+
+.dark {
+  --color-canvas: #090b0c;
+  --color-surface: #121516;
+  --color-ink: #eef2f2;
+  --color-muted: #a5b0b4;
+  --color-faint: #6f7a7e;
+  --color-line: #23282a;
+  --color-accent: #5dceb0;
+  --color-accent-soft: rgba(93, 206, 176, 0.14);
+  --glow-a: rgba(93, 206, 176, 0.1);
+  --glow-b: rgba(70, 130, 160, 0.08);
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+    background-image:
+      radial-gradient(900px 480px at 12% -10%, var(--glow-a), transparent 60%),
+      radial-gradient(700px 420px at 90% 0%, var(--glow-b), transparent 55%),
+      linear-gradient(180deg, transparent, var(--color-canvas) 40%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: var(--color-accent-soft);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@layer components {
+  .section-pad {
+    @apply px-5 sm:px-8 lg:px-10;
+  }
+
+  .section-y {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.18em] text-accent;
+  }
+
+  .section-title {
+    @apply mt-3 font-display text-3xl tracking-tight text-ink sm:text-4xl;
+  }
+
+  .section-lead {
+    @apply mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-ink text-canvas hover:opacity-90;
+  }
+
+  .btn-secondary {
+    @apply btn border border-line bg-surface text-ink backdrop-blur hover:border-faint hover:bg-canvas;
+  }
+
+  .btn-ghost {
+    @apply btn text-muted hover:text-ink;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

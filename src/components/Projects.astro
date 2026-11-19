@@ -1,0 +1,58 @@
+---
+import { projects } from '../data/site';
+---
+
+<section id="projects" class="section-pad section-y border-t border-line">
+  <div class="mx-auto max-w-content">
+    <div class="reveal">
+      <p class="eyebrow">Projects</p>
+      <h2 class="section-title">Selected case studies</h2>
+      <p class="section-lead">
+        Products and platforms I’ve built or shipped, with the impact that matters.
+      </p>
+    </div>
+
+    <div class="mt-14 divide-y divide-line border-y border-line">
+      {projects.map((project) => (
+        <article class="reveal grid gap-6 py-10 md:grid-cols-[1fr_1.2fr] md:gap-12">
+          <div>
+            <h3 class="font-display text-2xl tracking-tight text-ink sm:text-3xl">
+              {project.url ? (
+                <a
+                  href={project.url}
+                  class="underline-offset-4 transition hover:text-accent hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project.name}
+                </a>
+              ) : (
+                project.name
+              )}
+            </h3>
+            <p class="mt-3 text-sm font-medium text-accent">{project.impact}</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <li class="text-xs uppercase tracking-[0.14em] text-faint">{tag}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p class="text-base leading-relaxed text-muted sm:text-lg">{project.summary}</p>
+            {project.url && (
+              <a
+                href={project.url}
+                class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-ink transition hover:text-accent"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit site
+                <span aria-hidden="true">→</span>
+              </a>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
